@@ -1,14 +1,24 @@
-name: Lint
+# Name of workflow
+name: Node CI
 
+# Trigger the workflow on push or pull request
 on:
-  push:
-    branches:
-      - master 
+  - push
+  - pull_request
 
 jobs:
-  lint:
+  build:
+
+    # The type of machine to run the job on
     runs-on: ubuntu-latest
 
+    strategy:
+      # Node versions list
+      matrix:
+        node-version: [14.x]
+
     steps:
-    - name: ESLINT
-      run: npx lint
+      - uses: actions/checkout@v2
+      - name: Run linter
+        run: |
+          make lint
