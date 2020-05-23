@@ -1,20 +1,25 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Install and Lint
+name: NodeCI
 
 on: [push]
 
 jobs:
-  install_and_lint:
+  build:
 
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Setup Node.js 
-      uses: actions/setup-node@v1.4.2
-      with:
-        node-version: 13.x
-    - run: make install
-    - run: make lint
+      - uses: actions/checkout@v2
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v1.4.2
+        with:
+          node-version: 13.x
+        
+      - name: Install node packages
+        run: make install
+        
+      - name: Run eslint
+        run: make lint
