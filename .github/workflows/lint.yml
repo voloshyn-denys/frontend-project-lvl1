@@ -16,4 +16,5 @@ jobs:
       uses: actions/setup-node@v1.4.2
       with:
         node-version: 13.x
+    - run: make install
     - run: make lint
