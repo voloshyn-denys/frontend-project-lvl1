@@ -1,6 +1,6 @@
 {
   "name": "front-end-project-lvl1",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,7 @@
   "homepage": "https://github.com/voloshyn-denys/frontend-project-lvl1#readme",
   "type": "module",
   "bin": {
-    "brain-games": "bin/brain-games.js"
+    "brain-even": "bin/brain-even.js"
   },
   "dependencies": {
     "eslint": "^7.0.0",
