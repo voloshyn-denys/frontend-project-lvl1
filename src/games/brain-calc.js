@@ -5,7 +5,7 @@ const generateCalcPair = () => {
 
   const firstNumber = generateRandomNumber(20);
   const secondNumber = generateRandomNumber(20);
-  const operator = operations[generateRandomNumber(3)];
+  const operator = operations[generateRandomNumber(operations.length)];
 
   const question = `${firstNumber} ${operator} ${secondNumber}`;
   let answer = null;
