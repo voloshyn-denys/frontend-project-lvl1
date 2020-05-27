@@ -1,7 +1,5 @@
 import readlineSync from 'readline-sync';
 
-export const generateRandomNumber = (max) => Math.floor(Math.random() * Number(max));
-
 export const runEngine = (playerName, pair, score) => {
   const [question, answer] = pair();
 
@@ -38,5 +36,22 @@ const initGame = () => {
   runEngine(playerName, 0, []);
 };
 
+export const generateRandomNumber = (max) => Math.floor(Math.random() * Number(max));
+
+export const getGreatCommonDivisor = (firstNumber, secondNumber) => {
+  let max = Math.max(firstNumber, secondNumber);
+  let min = Math.min(firstNumber, secondNumber);
+
+  if (max % min === 0) return min;
+
+  let divisor = null;
+  while (max % min !== 0) {
+    divisor = max % min;
+    max = min;
+    min = divisor;
+  }
+
+  return divisor;
+};
 
 export default initGame;

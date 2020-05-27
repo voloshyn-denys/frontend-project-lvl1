@@ -19,7 +19,8 @@
   "type": "module",
   "bin": {
     "brain-even": "bin/brain-even.js",
-    "brain-calc": "bin/brain-calc.js"
+    "brain-calc": "bin/brain-calc.js",
+    "brain-gcd": "bin/brain-gcd.js"
   },
   "dependencies": {
     "eslint": "^7.0.0",
