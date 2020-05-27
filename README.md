@@ -6,3 +6,6 @@ Brain Even
 
 Brain Calc
 [![asciicast](https://asciinema.org/a/g3NjecqpQSEzvqtlVgQbIDtIR.svg)](https://asciinema.org/a/g3NjecqpQSEzvqtlVgQbIDtIR)
+
+Brain Great Common Divisor
+[![asciicast](https://asciinema.org/a/TsQ7V7vSDgzZItepwC0Czxmn3.svg)](https://asciinema.org/a/TsQ7V7vSDgzZItepwC0Czxmn3)
