@@ -54,4 +54,17 @@ export const getGreatCommonDivisor = (firstNumber, secondNumber) => {
   return divisor;
 };
 
+export const getProgression = (length, startPoint, step) => {
+  const result = [];
+
+  let number = startPoint;
+
+  for (let i = 0; i < length; i += 1) {
+    result.push(number);
+    number += step;
+  }
+
+  return result;
+};
+
 export default initGame;
