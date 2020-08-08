@@ -9,3 +9,6 @@ Brain Calc
 
 Brain Great Common Divisor
 [![asciicast](https://asciinema.org/a/TsQ7V7vSDgzZItepwC0Czxmn3.svg)](https://asciinema.org/a/TsQ7V7vSDgzZItepwC0Czxmn3)
+
+Brain Progression
+[![asciicast](https://asciinema.org/a/PcjInJEyZ0RcBgR42IDwQB3Nn.svg)](https://asciinema.org/a/PcjInJEyZ0RcBgR42IDwQB3Nn)
