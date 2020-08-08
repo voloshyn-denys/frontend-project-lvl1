@@ -1,10 +1,15 @@
 import {
+  generateRandomNumber,
+  isPrime,
   runEngine,
   setupPlayer,
 } from '../index.js';
 
 const generatePrimePair = () => {
-  return ['1', '2'];
+  const question = generateRandomNumber(200);
+  const answer = isPrime(question) ? 'yes' : 'no';
+
+  return [String(question), answer];
 };
 
 const game = () => {
