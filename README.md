@@ -12,3 +12,6 @@ Brain Great Common Divisor
 
 Brain Progression
 [![asciicast](https://asciinema.org/a/PcjInJEyZ0RcBgR42IDwQB3Nn.svg)](https://asciinema.org/a/PcjInJEyZ0RcBgR42IDwQB3Nn)
+
+Brain Prime
+[![asciicast](https://asciinema.org/a/cUzxqTXCZ22Ta8Liq1ldXxdl6.svg)](https://asciinema.org/a/cUzxqTXCZ22Ta8Liq1ldXxdl6)
