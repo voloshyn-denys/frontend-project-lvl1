@@ -1,9 +1,4 @@
-import {
-  generateRandomNumber,
-  getGreatCommonDivisor,
-  runEngine,
-  setupPlayer,
-} from '../index.js';
+import { generateRandomNumber, getGreatCommonDivisor } from '../index.js';
 
 const generateGcdPair = () => {
   const firstNumber = generateRandomNumber(1, 50);
@@ -15,9 +10,4 @@ const generateGcdPair = () => {
   return [question, String(answer)];
 };
 
-const startGame = () => {
-  const playerName = setupPlayer('Find the greatest common divisor of given numbers.');
-  runEngine(playerName, generateGcdPair, 0);
-};
-
-export default startGame;
+export default generateGcdPair;

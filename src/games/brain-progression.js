@@ -1,8 +1,4 @@
-import {
-  generateRandomNumber,
-  runEngine,
-  setupPlayer,
-} from '../index.js';
+import { generateRandomNumber } from '../index.js';
 
 const getProgression = (length, startPoint, step) => {
   const result = [];
@@ -30,9 +26,4 @@ const generateProgressionPair = () => {
   return [question, answer];
 };
 
-const startGame = () => {
-  const playerName = setupPlayer('What number is missing in the progression?');
-  runEngine(playerName, generateProgressionPair, 0);
-};
-
-export default startGame;
+export default generateProgressionPair;

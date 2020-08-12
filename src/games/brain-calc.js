@@ -1,4 +1,4 @@
-import { generateRandomNumber, runEngine, setupPlayer } from '../index.js';
+import { generateRandomNumber } from '../index.js';
 
 const generateCalcPair = () => {
   const operations = ['+', '-', '*'];
@@ -28,9 +28,4 @@ const generateCalcPair = () => {
   return [question, String(answer)];
 };
 
-const startGame = () => {
-  const playerName = setupPlayer('What is the result of the expression?');
-  runEngine(playerName, generateCalcPair, 0);
-};
-
-export default startGame;
+export default generateCalcPair;

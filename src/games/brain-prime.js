@@ -1,8 +1,4 @@
-import {
-  generateRandomNumber,
-  runEngine,
-  setupPlayer,
-} from '../index.js';
+import { generateRandomNumber } from '../index.js';
 
 const isPrime = (number) => {
   for (let i = 2; i < number; i += 1) {
@@ -19,9 +15,4 @@ const generatePrimePair = () => {
   return [String(question), answer];
 };
 
-const startGame = () => {
-  const playerName = setupPlayer('Answer "yes" if given number is prime. Otherwise answer "no".');
-  runEngine(playerName, generatePrimePair, 0);
-};
-
-export default startGame;
+export default generatePrimePair;

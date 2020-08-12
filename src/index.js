@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-export const runEngine = (playerName, pair, score) => {
+const runEngine = (playerName, pair, score) => {
   const [question, answer] = pair();
 
   console.log(`Question: ${question}`);
@@ -21,7 +21,7 @@ export const runEngine = (playerName, pair, score) => {
   }
 };
 
-export const setupPlayer = (condition) => {
+const setupPlayer = (condition) => {
   console.log('Welcome to the Brain Games!');
   const playerName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${playerName || 'stranger'}!`);
@@ -29,6 +29,11 @@ export const setupPlayer = (condition) => {
   if (condition) console.log(condition);
 
   return playerName;
+};
+
+const startGame = (descriptionMessage, genegatePair) => {
+  const playerName = setupPlayer(descriptionMessage);
+  runEngine(playerName, genegatePair, 0);
 };
 
 export const generateRandomNumber = (from, to) => {
@@ -53,3 +58,5 @@ export const getGreatCommonDivisor = (firstNumber, secondNumber) => {
 
   return divisor;
 };
+
+export default startGame;

@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import startGame from '../src/games/brain-calc.js';
+import startGame from '../src/index.js';
+import generateCalcPair from '../src/games/brain-calc.js';
 
-startGame();
+startGame('What is the result of the expression?', generateCalcPair);
