@@ -1,9 +1,21 @@
 import {
   generateRandomNumber,
-  getProgression,
   runEngine,
   setupPlayer,
 } from '../index.js';
+
+const getProgression = (length, startPoint, step) => {
+  const result = [];
+
+  let number = startPoint;
+
+  for (let i = 0; i < length; i += 1) {
+    result.push(number);
+    number += step;
+  }
+
+  return result;
+};
 
 const generateProgressionPair = () => {
   const length = 10;
