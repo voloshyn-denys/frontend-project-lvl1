@@ -3,9 +3,9 @@ import { generateRandomNumber, runEngine, setupPlayer } from '../index.js';
 const generateCalcPair = () => {
   const operations = ['+', '-', '*'];
 
-  const firstNumber = generateRandomNumber(20);
-  const secondNumber = generateRandomNumber(20);
-  const operator = operations[generateRandomNumber(operations.length)];
+  const firstNumber = generateRandomNumber(1, 20);
+  const secondNumber = generateRandomNumber(1, 20);
+  const operator = operations[generateRandomNumber(1, operations.length)];
 
   const question = `${firstNumber} ${operator} ${secondNumber}`;
   let answer;

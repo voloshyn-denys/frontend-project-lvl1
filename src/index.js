@@ -36,7 +36,12 @@ const initGame = () => {
   runEngine(playerName, 0, []);
 };
 
-export const generateRandomNumber = (max) => Math.floor(Math.random() * Number(max));
+export const generateRandomNumber = (from, to) => {
+  const min = Math.ceil(from);
+  const max = Math.floor(to);
+
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+};
 
 export const getGreatCommonDivisor = (firstNumber, secondNumber) => {
   let max = Math.max(firstNumber, secondNumber);
