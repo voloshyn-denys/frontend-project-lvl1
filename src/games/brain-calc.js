@@ -28,9 +28,9 @@ const generateCalcPair = () => {
   return [question, String(answer)];
 };
 
-const game = () => {
+const startGame = () => {
   const playerName = setupPlayer('What is the result of the expression?');
   runEngine(playerName, generateCalcPair, 0);
 };
 
-export default game;
+export default startGame;

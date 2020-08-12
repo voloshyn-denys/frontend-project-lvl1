@@ -7,9 +7,9 @@ const generateEvenPair = () => {
   return [question, answer];
 };
 
-const game = () => {
+const startGame = () => {
   const playerName = setupPlayer('Answer "yes" if the number is even, otherwise answer "no".');
   runEngine(playerName, generateEvenPair, 0);
 };
 
-export default game;
+export default startGame;

@@ -15,9 +15,9 @@ const generateGcdPair = () => {
   return [question, String(answer)];
 };
 
-const game = () => {
+const startGame = () => {
   const playerName = setupPlayer('Find the greatest common divisor of given numbers.');
   runEngine(playerName, generateGcdPair, 0);
 };
 
-export default game;
+export default startGame;

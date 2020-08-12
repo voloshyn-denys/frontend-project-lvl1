@@ -18,9 +18,9 @@ const generateProgressionPair = () => {
   return [question, answer];
 };
 
-const game = () => {
+const startGame = () => {
   const playerName = setupPlayer('What number is missing in the progression?');
   runEngine(playerName, generateProgressionPair, 0);
 };
 
-export default game;
+export default startGame;
