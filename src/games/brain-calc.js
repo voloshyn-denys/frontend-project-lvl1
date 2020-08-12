@@ -8,7 +8,7 @@ const generateCalcPair = () => {
   const operator = operations[generateRandomNumber(operations.length)];
 
   const question = `${firstNumber} ${operator} ${secondNumber}`;
-  let answer = null;
+  let answer;
 
   switch (operator) {
     case '+':
