@@ -11,15 +11,15 @@ const runEngine = (playerName, genegatePair, score) => {
   if (answer === userAnswer) {
     printMessage('Correct!');
 
-    if (score < 2) {
-      runEngine(playerName, pair, score + 1);
-    } else {
+    if (score === 3) {
       printMessage(`Congratulations, ${playerName}!!`);
+    } else {
+      runEngine(playerName, genegatePair, score + 1);
     }
   } else {
     printMessage(`"${userAnswer}" is wrong answer ;(. Correct answer was "${answer}".`);
     printMessage(`Let's try again, ${playerName}!`);
-    runEngine(playerName, pair, 0);
+    runEngine(playerName, genegatePair, 0);
   }
 };
 
