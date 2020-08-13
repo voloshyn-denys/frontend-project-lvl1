@@ -2,8 +2,8 @@ import readlineSync from 'readline-sync';
 
 const printMessage = (string) => { console.log(string); };
 
-const runEngine = (playerName, pair, score) => {
-  const [question, answer] = pair();
+const runEngine = (playerName, genegatePair, score) => {
+  const [question, answer] = genegatePair();
 
   printMessage(`Question: ${question}`);
   const userAnswer = readlineSync.question('Your answer: ');
@@ -33,8 +33,8 @@ const setupPlayer = (condition) => {
   return playerName;
 };
 
-const startGame = (descriptionMessage, genegatePair) => {
-  const playerName = setupPlayer(descriptionMessage);
+const startGame = (condition, genegatePair) => {
+  const playerName = setupPlayer(condition);
   runEngine(playerName, genegatePair, 0);
 };
 
