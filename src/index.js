@@ -1,32 +1,34 @@
 import readlineSync from 'readline-sync';
 
+const printMessage = (string) => { console.log(string); };
+
 const runEngine = (playerName, pair, score) => {
   const [question, answer] = pair();
 
-  console.log(`Question: ${question}`);
+  printMessage(`Question: ${question}`);
   const userAnswer = readlineSync.question('Your answer: ');
 
   if (answer === userAnswer) {
-    console.log('Correct!');
+    printMessage('Correct!');
 
     if (score < 2) {
       runEngine(playerName, pair, score + 1);
     } else {
-      console.log(`Congratulations, ${playerName}!!`);
+      printMessage(`Congratulations, ${playerName}!!`);
     }
   } else {
-    console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${answer}".`);
-    console.log(`Let's try again, ${playerName}!`);
+    printMessage(`"${userAnswer}" is wrong answer ;(. Correct answer was "${answer}".`);
+    printMessage(`Let's try again, ${playerName}!`);
     runEngine(playerName, pair, 0);
   }
 };
 
 const setupPlayer = (condition) => {
-  console.log('Welcome to the Brain Games!');
+  printMessage('Welcome to the Brain Games!');
   const playerName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${playerName || 'stranger'}!`);
+  printMessage(`Hello, ${playerName || 'stranger'}!`);
 
-  if (condition) console.log(condition);
+  if (condition) printMessage(condition);
 
   return playerName;
 };
