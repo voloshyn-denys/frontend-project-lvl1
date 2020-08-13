@@ -2,28 +2,7 @@ import readlineSync from 'readline-sync';
 
 const printMessage = (string) => { console.log(string); };
 
-const runEngine = (playerName, genegatePair, score) => {
-  const [question, answer] = genegatePair();
-
-  printMessage(`Question: ${question}`);
-  const userAnswer = readlineSync.question('Your answer: ');
-
-  if (answer === userAnswer) {
-    printMessage('Correct!');
-
-    if (score === 3) {
-      printMessage(`Congratulations, ${playerName}!!`);
-    } else {
-      runEngine(playerName, genegatePair, score + 1);
-    }
-  } else {
-    printMessage(`"${userAnswer}" is wrong answer ;(. Correct answer was "${answer}".`);
-    printMessage(`Let's try again, ${playerName}!`);
-    runEngine(playerName, genegatePair, 0);
-  }
-};
-
-const setupPlayer = (condition) => {
+const greetPlayer = (condition) => {
   printMessage('Welcome to the Brain Games!');
   const playerName = readlineSync.question('May I have your name? ');
   printMessage(`Hello, ${playerName || 'stranger'}!`);
@@ -33,9 +12,28 @@ const setupPlayer = (condition) => {
   return playerName;
 };
 
-const startGame = (condition, genegatePair) => {
-  const playerName = setupPlayer(condition);
-  runEngine(playerName, genegatePair, 0);
+const startGame = (condition, generatePair) => {
+  let score = 0;
+  const playerName = greetPlayer(condition);
+
+  while (score !== 3) {
+    const [question, answer] = generatePair();
+    printMessage(`Question: ${question}`);
+    const userAnswer = readlineSync.question('Your answer: ');
+
+    if (answer === userAnswer) {
+      score += 1;
+
+      printMessage('Correct!');
+    } else {
+      score = 0;
+
+      printMessage(`"${userAnswer}" is wrong answer ;(. Correct answer was "${answer}".`);
+      printMessage(`Let's try again, ${playerName}!`);
+    }
+  }
+
+  printMessage(`Congratulations, ${playerName}!!`);
 };
 
 export const generateRandomNumber = (from, to) => {
