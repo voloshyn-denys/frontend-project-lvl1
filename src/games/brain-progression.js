@@ -17,7 +17,7 @@ const generateProgressionPair = () => {
   const length = 10;
   const startPoint = generateRandomNumber(1, 50);
   const step = generateRandomNumber(1, 10);
-  const answerIndex = generateRandomNumber(1, length);
+  const answerIndex = generateRandomNumber(0, length - 1);
 
   const progression = getProgression(length, startPoint, step);
   const answer = String(progression[answerIndex]);
